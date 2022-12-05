@@ -1,0 +1,72 @@
+.filters {
+  display: flex;
+  flex-basis: 100%;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin: 0 1rem;
+  margin-bottom: 2px;
+  margin-top: -5px;
+  overflow-x: scroll;
+}
+
+.description {
+  color: var(--white-primary);
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 14px;
+  margin-left: 1rem;
+}
+
+.description:before {
+  background-color: var(--green-primary);
+  content: '';
+  display: inline-block;
+  height: 15px;
+  margin-right: 2px;
+  width: 7px;
+}
+
+.filters::-webkit-scrollbar {
+  height: 2px;
+}
+
+.filters::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+.filters::-webkit-scrollbar-thumb {
+  background: transparent;
+  border-radius: 10px;
+}
+
+.filters__btn {
+  background-color: transparent;
+  border: none;
+  border-radius: 1rem;
+  color: var(--white-primary);
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+  padding: 2px 5px;
+  white-space: nowrap;
+}
+
+.filters__btn:focus {
+  outline: none;
+}
+
+.selected {
+  background-color: transparent;
+  border: none;
+  border-bottom: 3px solid var(--orange-primary);
+  color: var(--white-primary);
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+  padding: 2px 5px;
+  white-space: nowrap;
+}
+
+.selected:focus {
+  outline: none;
+}

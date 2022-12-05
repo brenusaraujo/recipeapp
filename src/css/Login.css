@@ -1,0 +1,120 @@
+.login-container {
+  align-items: center;
+  background-image: linear-gradient(to right bottom, #1212128c, #121212e6) , url('../images/slanted-gradient\ \(1\).svg');
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.text-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 22%;
+}
+
+.login__header {
+  color: var(--orange-primary);
+  display: block;
+  font-family: Pacifico , cursive;
+  font-size: 2rem;
+  font-weight: 400;
+  height: 100%;
+  letter-spacing: -2px;
+  margin-top: 25px;
+  text-align: center;
+  text-shadow: 0 0 50px rgb(235, 94, 94) , 0 0 5px rgb(235, 94, 94);
+  width: 100%;
+  word-spacing: 5px;
+}
+
+.login__text {
+  color: var(--orange-primary);
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+.login__text--sub {
+  color: var(--white-primary);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.login__form {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 40%;
+  width: 70%;
+}
+
+.login__input {
+  background-color: var(--gray-primary);
+  border: none;
+  border-radius: 5px;
+  color: var(--white-primary);
+  font-size: 0.9rem;
+  margin-bottom: 1.2rem;
+  padding: 5px 1rem;
+  transition: all 0.2s;
+  width: 90%;
+}
+
+.login__input::placeholder {
+  font-size: 0.9rem;
+}
+
+.login__input:focus {
+  border: 2px solid var(--orange-primary);
+  outline: none;
+}
+
+.login__btn {
+  background-color: var(--orange-primary);
+  border: none;
+  border-radius: 7px;
+  color: var(--white-primary);
+  cursor: pointer;
+  padding: 5px 1rem;
+  transition: all 0.2s;
+  width: 90%;
+}
+
+.login__btn:hover {
+  background-color: var(--orange-darker);
+  transform: translateY(-2px);
+}
+
+.login__btn:focus, .login__btn:active {
+  border: none;
+  outline: none;
+  transform: translateY(-1px);
+}
+
+.login__btn-disabled {
+  background-color: var(--orange-primary);
+  border: none;
+  border-radius: 7px;
+  color: var(--white-primary);
+  cursor: not-alloxwed;
+  opacity: 75%;
+  padding: 5px 1rem;
+  width: 90%;
+}
+
+@media screen and ( min-width : 600px ) {
+
+  .login__form {
+    margin-top: 2rem;
+    width: 45%;
+  }
+
+  .login__input {
+    margin-bottom: 2rem;
+  }
+}

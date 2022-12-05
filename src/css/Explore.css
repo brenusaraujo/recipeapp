@@ -1,0 +1,24 @@
+.explore {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  left: 50%;
+  position: absolute;
+  top: 45%;
+  transform: translate(-50%, -50%);
+}
+
+.explore__btn {
+  background-color: var(--orange-primary);
+  border: none;
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 4px 10px;
+  width: 100%;
+}
+
+.explore__btn:focus {
+  background-color: var(--orange-darker);
+  outline: none;
+}

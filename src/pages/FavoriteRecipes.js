@@ -1,144 +1,116 @@
-import React, { useEffect, useContext, useState } from 'react';
-import { Link } from 'react-router-dom';
-import copy from 'clipboard-copy';
+import React, { useEffect, useState } from 'react';
 import Header from '../components/Header';
-import shareIcon from '../images/shareIcon.svg';
-import blackHeartIcon from '../images/blackHeartIcon.svg';
-import AppContext from '../context/AppContext';
+import { getFavoriteRecipes, setFavoriteRecipes } from '../services/localStorage';
+import FavoriteCard from '../components/FavoriteCard';
+
+const copy = require('clipboard-copy');
 
 function FavoriteRecipes() {
-  const {
-    setTitle,
-  } = useContext(AppContext);
+  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [favorites, setFavorites] = useState([]);
+  const [isCopied, setIsCopied] = useState(false);
+  const [filteredRecipes, setFilteredRecipes] = useState([]);
+  const [renderFavorites, setRenderFavorites] = useState([]);
   useEffect(() => {
-    document.title = 'Favorite Recipes';
-    setTitle(document.title); // ?
+    setFavorites(getFavoriteRecipes());
   }, []);
 
-  const [favoriteFoods, setFavoriteFoods] = useState([]);
-  const [elementCopied, setElementCopied] = useState('');
-  const [filter, setFilter] = useState('all');
-
-  const handleClickShare = (type, id) => {
-    setElementCopied(id);
-    copy(`http://localhost:3000/${type}s/${id}`);
-  };
-
-  const handleFavoriteStorage = (currentId) => {
-    const favoriteStorage = JSON.parse(localStorage.getItem('favoriteRecipes'));
-    const newFavorites = favoriteStorage.filter(({ id }) => id !== currentId);
-    localStorage.setItem('favoriteRecipes', JSON.stringify(newFavorites));
-    setFavoriteFoods(newFavorites);
-  };
-
   useEffect(() => {
-    const getLocalStorage = () => {
-      const storage = localStorage.getItem('favoriteRecipes');
-      const favoriteRecipes = storage ? JSON.parse(storage) : [];
-      setFavoriteFoods(favoriteRecipes);
-    };
-    getLocalStorage();
-  }, []);
+    if (filteredRecipes.length) return setRenderFavorites(filteredRecipes);
+    return setRenderFavorites(favorites);
+  }, [favorites, filteredRecipes]);
+
+  const handleShare = async ({ target: { id } }) => {
+    await copy(`http://localhost:3000/${id}`);
+    setIsCopied(true);
+  };
+
+  const handleFavorite = ({ target: { id } }) => {
+    const deleteFavorite = getFavoriteRecipes().filter(
+      (recipe) => recipe.name !== id,
+    );
+    setFavoriteRecipes(deleteFavorite);
+    setFavorites(deleteFavorite);
+  };
+
+  const handleFilter = ({ target: { id } }) => {
+    setSelectedCategory(id);
+    const type = id === 'Food' ? 'comida' : 'bebida';
+    const filterFavorites = favorites.filter((recipe) => recipe.type === type);
+    setFilteredRecipes(filterFavorites);
+  };
+
+  const handleAll = () => {
+    setSelectedCategory('All');
+    setFilteredRecipes([]);
+  };
 
   return (
-    <>
-      <Header />
-      <div>
+    <div className="page-container">
+      <Header name="Receitas Favoritas" />
+      <div className="filters">
         <button
+          className={ selectedCategory === 'All' ? 'selected' : 'filters__btn' }
+          id="All"
           type="button"
-          style={ { cursor: 'pointer' } }
           data-testid="filter-by-all-btn"
-          onClick={ () => setFilter('all') }
+          onClick={ handleAll }
         >
           All
         </button>
         <button
+          className={ selectedCategory === 'Food' ? 'selected' : 'filters__btn' }
+          id="Food"
           type="button"
-          style={ { cursor: 'pointer' } }
           data-testid="filter-by-food-btn"
-          onClick={ () => setFilter('food') }
+          onClick={ handleFilter }
         >
           Food
         </button>
         <button
+          className={ selectedCategory === 'Drink' ? 'selected' : 'filters__btn' }
+          id="Drink"
           type="button"
-          style={ { cursor: 'pointer' } }
           data-testid="filter-by-drink-btn"
-          onClick={ () => setFilter('drink') }
+          onClick={ handleFilter }
         >
-          Drinks
+          Drink
         </button>
       </div>
-      { !!favoriteFoods.length && (
-        <section>
-          {
-            favoriteFoods.filter(({ type }) => filter === 'all' || type === filter)
-              .map(({
-                id,
-                image,
-                name,
-                type,
-                category,
-                alcoholicOrNot,
-                nationality,
-              }, index) => (
-                <div
-                  key={ `${id}-${index}` }
-                >
-                  <Link to={ `/${type}s/${id}` }>
-                    <img
-                      data-testid={ `${index}-horizontal-image` }
-                      src={ image }
-                      alt={ `${name}` }
-                      style={ { width: '250px' } }
-                    />
-                  </Link>
-                  <Link to={ `/${type}s/${id}` }>
-                    <h3
-                      data-testid={ `${index}-horizontal-name` }
-                    >
-                      {name}
-                    </h3>
-                  </Link>
-                  <p
-                    data-testid={ `${index}-horizontal-top-text` }
-                  >
-                    {type === 'food' ? `${nationality} - ${category}` : alcoholicOrNot}
-                  </p>
-                  <button
-                    type="button"
-                    onClick={ () => handleClickShare(type, id) }
-                    style={ { background: 'none', border: 'none', cursor: 'pointer' } }
-                  >
-                    <img
-                      data-testid={ `${index}-horizontal-share-btn` }
-                      src={ shareIcon }
-                      alt="Ícone de compartilhamento"
-                    />
-                  </button>
-                  {elementCopied === id
-                  && (
-                    <span>
-                      Link copied!
-                    </span>
-                  )}
-                  <button
-                    type="button"
-                    onClick={ () => handleFavoriteStorage(id) }
-                    style={ { background: 'none', border: 'none', cursor: 'pointer' } }
-                  >
-                    <img
-                      src={ blackHeartIcon }
-                      alt="Ícone de favoritar"
-                      data-testid={ `${index}-horizontal-favorite-btn` }
-                    />
-                  </button>
-                </div>
-              ))
+      <ul className="recipe-list">
+        { renderFavorites && renderFavorites.map((recipe, index) => {
+          if (recipe.type === 'comida') {
+            return (
+              <li key={ recipe.name }>
+                <FavoriteCard
+                  type="comidas"
+                  recipe={ recipe }
+                  index={ index }
+                  topText={ `${recipe.area} - ${recipe.category}` }
+                  handleFavorite={ handleFavorite }
+                  handleShare={ handleShare }
+                  isCopied={ isCopied }
+                />
+              </li>
+            );
           }
-        </section>
-      )}
-    </>
+          return (
+            <li key={ recipe.name }>
+              <FavoriteCard
+                type="bebidas"
+                recipe={ recipe }
+                index={ index }
+                topText={ recipe.alcoholicOrNot }
+                handleFavorite={ handleFavorite }
+                handleShare={ handleShare }
+                isCopied={ isCopied }
+              />
+            </li>
+          );
+        }) }
+      </ul>
+
+    </div>
   );
 }
 

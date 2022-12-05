@@ -1,66 +1,54 @@
-import React, { useContext, useState, useEffect } from 'react';
-import { useHistory } from 'react-router-dom';
-
-import AppContext from '../context/AppContext';
-import Header from '../components/Header';
+import React from 'react';
+import { useHistory } from 'react-router';
 import Footer from '../components/Footer';
+import Header from '../components/Header';
 
 function Profile() {
+  const email = localStorage.getItem('user')
+    ? JSON.parse(localStorage.getItem('user')).email : '';
   const history = useHistory();
-  const {
-    setTitle,
-  } = useContext(AppContext);
 
-  const [user, setUser] = useState('');
-
-  useEffect(() => {
-    document.title = 'Profile';
-    setTitle(document.title);
-    const userEmail = JSON.parse(localStorage.getItem('user'));
-    if (userEmail !== null) {
-      setUser(userEmail);
-    } else {
-      setUser({ email: 'email@mail.com' });
-    }
-  }, []);
-
-  const handleLogoutClick = () => {
+  const redirect = (redirectTo) => {
+    if (redirectTo === 'done-recipes') return history.push('/receitas-feitas');
+    if (redirectTo === 'favorite-recipes') return history.push('/receitas-favoritas');
     history.push('/');
     localStorage.clear();
   };
 
   return (
-    <>
-      <Header />
-      <div>
-        <h3 data-testid="profile-email">
-          email:
-          {user.email}
-        </h3>
-        <button
-          type="button"
-          data-testid="profile-done-btn"
-          onClick={ () => history.push('/done-recipes') }
-        >
-          Done Recipes
-        </button>
-        <button
-          type="button"
-          data-testid="profile-favorite-btn"
-          onClick={ () => history.push('/favorite-recipes') }
-        >
-          Favorite Recipes
-        </button>
-        <button
-          type="button"
-          data-testid="profile-logout-btn"
-          onClick={ handleLogoutClick }
-        >
-          Logout
-        </button>
+    <div className="page-container-gradient">
+      <Header name="Perfil" />
+      <div className="profile">
+        <p className="email" data-testid="profile-email">{email}</p>
+        <div className="explore">
+          <button
+            className="explore__btn"
+            onClick={ () => redirect('done-recipes') }
+            type="button"
+            data-testid="profile-done-btn"
+          >
+            Receitas Feitas
+          </button>
+          <button
+            className="explore__btn"
+            onClick={ () => redirect('favorite-recipes') }
+            type="button"
+            data-testid="profile-favorite-btn"
+          >
+            Receitas Favoritas
+          </button>
+          <button
+            className="explore__btn"
+            onClick={ () => redirect('login') }
+            type="button"
+            data-testid="profile-logout-btn"
+          >
+            Sair
+          </button>
+        </div>
       </div>
       <Footer />
-    </>
+    </div>
   );
 }
 

@@ -1,43 +1,46 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
-import { useHistory } from 'react-router-dom';
-import AppContext from '../context/AppContext';
+import { Link } from 'react-router-dom';
 
-function Card({ name, thumb, index, type, id }) {
-  const { setId } = useContext(AppContext);
-  const history = useHistory();
-
-  function redirectToDetails() {
-    setId(id);
-    if (type === 'foods') {
-      history.push(`/foods/${id}`);
-    } else {
-      history.push(`/drinks/${id}`);
-    }
-  }
+function Card({ index, header, img, id, itemId, testId }) {
+  const urlByCategory = id === 'idMeal' ? 'comidas' : 'bebidas';
   return (
-    <div data-testid={ `${index}-recipe-card` }>
-      <button type="button" onClick={ redirectToDetails }>
-        <legend data-testid={ `${index}-card-name` }>
-          {name}
-        </legend>
+    <Link to={ `/${urlByCategory}/${itemId}` }>
+      <div className="recipe-card" data-testid={ testId }>
         <img
-          src={ thumb }
-          alt={ `${name} recipe.` }
+          className="recipe-card__image"
+          src={ img }
+          alt={ header }
           data-testid={ `${index}-card-img` }
-          style={ { width: '200px', height: '200px' } }
         />
-      </button>
-    </div>
+        <div className="recipe-card__info">
+          <h3
+            data-testid={ `${index}-${
+              testId.includes('recomendation')
+                ? 'recomendation-title'
+                : 'card-name'
+            }` }
+            className="recipe-card__title"
+          >
+            {header}
+          </h3>
+          <p className="recipe-card__redirect">
+            <span className="recipe-card__arrow">&#8594;</span>
+            Info receita
+          </p>
+        </div>
+      </div>
+    </Link>
   );
 }
 
 Card.propTypes = {
-  name: PropTypes.string,
-  type: PropTypes.string,
-  thumb: PropTypes.string,
-  index: PropTypes.number,
-  id: PropTypes.number,
-}.isRequired;
+  index: PropTypes.number.isRequired,
+  header: PropTypes.string.isRequired,
+  img: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
+  itemId: PropTypes.string.isRequired,
+  testId: PropTypes.string.isRequired,
+};
 
 export default Card;
