@@ -1,0 +1,106 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-08-22T17:56:34.000Z",
+    "end": "2022-08-22T17:56:37.686Z",
+    "duration": 3686,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "c7b32b7e-495f-4374-b01c-2a25b65f83b3",
+      "title": "",
+      "fullFile": "cypress/integration/01-coverage_spec.js",
+      "file": "cypress/integration/01-coverage_spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "ac529569-d296-4b2c-841d-f2aaabdf97e2",
+          "title": "1 - Desenvolva os testes unitários de maneira que a cobertura seja de, no mínimo, 90%",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verifica a cobertura de 90% da aplicação total",
+              "fullTitle": "1 - Desenvolva os testes unitários de maneira que a cobertura seja de, no mínimo, 90% Verifica a cobertura de 90% da aplicação total",
+              "timedOut": null,
+              "duration": 3277,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.task('getCoverage', getId()).its('total.branches.pct').should('be.gte', 90.00);",
+              "err": {},
+              "uuid": "8b247ca6-6df8-4d37-a46a-bb4f88c86c41",
+              "parentUUID": "ac529569-d296-4b2c-841d-f2aaabdf97e2",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "8b247ca6-6df8-4d37-a46a-bb4f88c86c41"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 3277,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.3.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

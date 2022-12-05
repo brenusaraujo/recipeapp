@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1661528871062" clover="3.2.0">
+  <project timestamp="1661528871062" name="All files">
+    <metrics statements="352" coveredstatements="242" conditionals="95" coveredconditionals="62" methods="106" coveredmethods="67" elements="553" coveredelements="371" complexity="0" loc="352" ncloc="352" packages="6" files="26" classes="26"/>
+    <package name="src">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="App.js" path="/Users/brenoaraujo/Projetos Trybe/sd-022-b-project-recipes-app/src/App.js">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="18" count="10" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components">
+      <metrics statements="190" coveredstatements="127" conditionals="80" coveredconditionals="51" methods="63" coveredmethods="36"/>
+      <file name="Card.js" path="/Users/brenoaraujo/Projetos Trybe/sd-022-b-project-recipes-app/src/components/Card.js">
+        <metrics statements="8" coveredstatements="4" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="1"/>
+        <line num="7" count="235" type="stmt"/>
+        <line num="8" count="235" type="stmt"/>
+        <line num="11" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="18" count="235" type="stmt"/>
+        <line num="35" count="6" type="stmt"/>
+      </file>
+      <file name="DetailCard.js" path="/Users/brenoaraujo/Projetos Trybe/sd-022-b-project-recipes-app/src/components/DetailCard.js">
+        <metrics statements="28" coveredstatements="3" conditionals="8" coveredconditionals="0" methods="6" coveredmethods="0"/>
+        <line num="7" count="6" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="12" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="28" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="51" count="0" type="stmt"/>
+        <line num="52" count="0" type="stmt"/>
+        <line num="57" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="58" count="0" type="stmt"/>
+        <line num="59" count="0" type="stmt"/>
+        <line num="60" count="0" type="stmt"/>
+        <line num="61" count="0" type="stmt"/>
+        <line num="62" count="0" type="stmt"/>
+        <line num="80" count="0" type="stmt"/>
+        <line num="81" count="0" type="stmt"/>
+        <line num="88" count="0" type="stmt"/>
+        <line num="98" count="6" type="stmt"/>
+        <line num="102" count="6" type="stmt"/>
+      </file>
+      <file name="DrinkCards.js" path="/Users/brenoaraujo/Projetos Trybe/sd-022-b-project-recipes-app/src/components/DrinkCards.js">
+        <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
+        <line num="5" count="34" type="stmt"/>
+        <line num="6" count="33" type="stmt"/>
+        <line num="8" count="33" type="stmt"/>
+        <line num="15" count="150" type="cond" truecount="2" falsecount="0"/>
+      </file>
+      <file name="FoodCards.js" path="/Users/brenoaraujo/Projetos Trybe/sd-022-b-project-recipes-app/src/components/FoodCards.js">
+        <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
+        <line num="5" count="55" type="stmt"/>
+        <line num="6" count="55" type="stmt"/>
+        <line num="8" count="55" type="stmt"/>
+        <line num="15" count="225" type="cond" truecount="2" falsecount="0"/>
+      </file>
+      <file name="Footer.js" path="/Users/brenoaraujo/Projetos Trybe/sd-022-b-project-recipes-app/src/components/Footer.js">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="7" count="90" type="stmt"/>
+      </file>
+      <file name="Header.js" path="/Users/brenoaraujo/Projetos Trybe/sd-022-b-project-recipes-app/src/components/Header.js">
+        <metrics statements="6" coveredstatements="6" conditionals="6" coveredconditionals="6" methods="3" coveredmethods="3"/>
+        <line num="9" count="98" type="stmt"/>
+        <line num="10" count="97" type="stmt"/>
+        <line num="11" count="97" type="stmt"/>
+        <line num="13" count="97" type="stmt"/>
+        <line num="14" count="56" type="stmt"/>
+        <line num="17" count="97" type="stmt"/>
+      </file>
+      <file name="RecipeDetails.js" path="/Users/brenoaraujo/Projetos Trybe/sd-022-b-project-recipes-app/src/components/RecipeDetails.js">
+        <metrics statements="44" coveredstatements="18" conditionals="20" coveredconditionals="6" methods="20" coveredmethods="4"/>
+        <line num="11" count="7" type="stmt"/>
+        <line num="17" count="7" type="stmt"/>
+        <line num="20" count="3" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="24" count="3" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="28" count="7" type="stmt"/>
+        <line num="29" count="6" type="cond" truecount="2" falsecount="0"/>
+        <line num="30" count="3" type="stmt"/>
+        <line num="31" count="3" type="cond" truecount="1" falsecount="1"/>
+        <line num="32" count="3" type="stmt"/>
+        <line num="36" count="7" type="stmt"/>
+        <line num="37" count="0" type="cond" truecount="0" falsecount="3"/>
+        <line num="39" count="0" type="stmt"/>
+        <line num="40" count="0" type="cond" truecount="0" falsecount="3"/>
+        <line num="42" count="0" type="stmt"/>
+        <line num="43" count="0" type="stmt"/>
+        <line num="45" count="0" type="stmt"/>
+        <line num="47" count="0" type="stmt"/>
+        <line num="52" count="7" type="stmt"/>
+        <line num="53" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="54" count="0" type="stmt"/>
+        <line num="69" count="7" type="stmt"/>
+        <line num="70" count="0" type="stmt"/>
+        <line num="71" count="0" type="stmt"/>
+        <line num="72" count="0" type="stmt"/>
+        <line num="75" count="7" type="stmt"/>
+        <line num="76" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="77" count="0" type="stmt"/>
+        <line num="78" count="0" type="stmt"/>
+        <line num="88" count="0" type="stmt"/>
+        <line num="89" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="90" count="0" type="stmt"/>
+        <line num="91" count="0" type="stmt"/>
+        <line num="101" count="0" type="stmt"/>
+        <line num="105" count="7" type="cond" truecount="2" falsecount="0"/>
+        <line num="106" count="4" type="stmt"/>
+        <line num="109" count="0" type="stmt"/>
+        <line num="149" count="0" type="stmt"/>
+        <line num="157" count="3" type="cond" truecount="1" falsecount="1"/>
+        <line num="158" count="3" type="stmt"/>
+        <line num="161" count="0" type="stmt"/>
+        <line num="198" count="0" type="stmt"/>
+        <line num="209" count="6" type="stmt"/>
+      </file>
+      <file name="Recipes.js" path="/Users/brenoaraujo/Projetos Trybe/sd-022-b-project-recipes-app/src/components/Recipes.js">
+        <metrics statements="50" coveredstatements="42" conditionals="10" coveredconditionals="7" methods="21" coveredmethods="17"/>
+        <line num="8" count="103" type="stmt"/>
+        <line num="9" count="103" type="stmt"/>
+        <line num="11" count="103" type="stmt"/>
+        <line num="13" count="103" type="stmt"/>
+        <line num="14" count="103" type="stmt"/>
+        <line num="15" count="103" type="stmt"/>
+        <line num="16" count="103" type="stmt"/>
+        <line num="17" count="103" type="stmt"/>
+        <line num="18" count="103" type="stmt"/>
+        <line num="19" count="103" type="stmt"/>
+        <line num="22" count="15" type="stmt"/>
+        <line num="23" count="100" type="stmt"/>
+        <line num="24" count="4" type="stmt"/>
+        <line num="25" count="4" type="stmt"/>
+        <line num="26" count="78" type="stmt"/>
+        <line num="30" count="15" type="stmt"/>
+        <line num="31" count="50" type="stmt"/>
+        <line num="32" count="2" type="stmt"/>
+        <line num="33" count="2" type="stmt"/>
+        <line num="34" count="22" type="stmt"/>
+        <line num="38" count="15" type="cond" truecount="1" falsecount="1"/>
+        <line num="39" count="15" type="stmt"/>
+        <line num="41" count="15" type="stmt"/>
+        <line num="43" count="0" type="stmt"/>
+        <line num="44" count="0" type="stmt"/>
+        <line num="48" count="103" type="stmt"/>
+        <line num="49" count="13" type="stmt"/>
+        <line num="53" count="235" type="stmt"/>
+        <line num="66" count="0" type="stmt"/>
+        <line num="79" count="1" type="stmt"/>
+        <line num="80" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="81" count="1" type="stmt"/>
+        <line num="82" count="7" type="stmt"/>
+        <line num="84" count="0" type="stmt"/>
+        <line num="85" count="0" type="stmt"/>
+        <line num="90" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="91" count="0" type="stmt"/>
+        <line num="92" count="0" type="stmt"/>
+        <line num="94" count="1" type="stmt"/>
+        <line num="95" count="1" type="stmt"/>
+        <line num="100" count="103" type="cond" truecount="2" falsecount="0"/>
+        <line num="101" count="35" type="stmt"/>
+        <line num="103" count="68" type="stmt"/>
+        <line num="106" count="103" type="stmt"/>
+        <line num="108" count="103" type="stmt"/>
+        <line num="119" count="75" type="stmt"/>
+        <line num="123" count="1" type="stmt"/>
+        <line num="130" count="235" type="stmt"/>
+        <line num="131" count="0" type="stmt"/>
+        <line num="137" count="6" type="stmt"/>
+      </file>
+      <file name="SearchBar.js" path="/Users/brenoaraujo/Projetos Trybe/sd-022-b-project-recipes-app/src/components/SearchBar.js">
+        <metrics statements="45" coveredstatements="45" conditionals="30" coveredconditionals="28" methods="6" coveredmethods="6"/>
+        <line num="18" count="94" type="stmt"/>
+        <line num="19" count="93" type="stmt"/>
+        <line num="20" count="93" type="stmt"/>
+        <line num="21" count="93" type="stmt"/>
+        <line num="23" count="93" type="stmt"/>
+        <line num="24" count="13" type="cond" truecount="2" falsecount="0"/>
+        <line num="25" count="7" type="cond" truecount="2" falsecount="0"/>
+        <line num="26" count="1" type="stmt"/>
+        <line num="27" count="6" type="cond" truecount="2" falsecount="0"/>
+        <line num="28" count="1" type="stmt"/>
+        <line num="30" count="5" type="stmt"/>
+        <line num="35" count="93" type="stmt"/>
+        <line num="36" count="13" type="cond" truecount="2" falsecount="0"/>
+        <line num="37" count="6" type="cond" truecount="2" falsecount="0"/>
+        <line num="38" count="1" type="stmt"/>
+        <line num="39" count="5" type="cond" truecount="2" falsecount="0"/>
+        <line num="40" count="1" type="stmt"/>
+        <line num="42" count="4" type="stmt"/>
+        <line num="47" count="93" type="stmt"/>
+        <line num="48" count="6" type="cond" truecount="2" falsecount="0"/>
+        <line num="49" count="1" type="stmt"/>
+        <line num="50" count="1" type="stmt"/>
+        <line num="51" count="5" type="cond" truecount="2" falsecount="0"/>
+        <line num="52" count="3" type="stmt"/>
+        <line num="53" count="3" type="stmt"/>
+        <line num="54" count="2" type="cond" truecount="1" falsecount="1"/>
+        <line num="55" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="56" count="1" type="stmt"/>
+        <line num="58" count="2" type="stmt"/>
+        <line num="59" count="2" type="stmt"/>
+        <line num="63" count="93" type="stmt"/>
+        <line num="64" count="6" type="cond" truecount="2" falsecount="0"/>
+        <line num="65" count="1" type="stmt"/>
+        <line num="66" count="1" type="stmt"/>
+        <line num="67" count="5" type="cond" truecount="2" falsecount="0"/>
+        <line num="68" count="3" type="stmt"/>
+        <line num="69" count="3" type="stmt"/>
+        <line num="70" count="2" type="cond" truecount="1" falsecount="1"/>
+        <line num="71" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="72" count="1" type="stmt"/>
+        <line num="74" count="2" type="stmt"/>
+        <line num="75" count="2" type="stmt"/>
+        <line num="79" count="93" type="stmt"/>
+        <line num="80" count="10" type="stmt"/>
+        <line num="83" count="93" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.context">
+      <metrics statements="12" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="AppContext.js" path="/Users/brenoaraujo/Projetos Trybe/sd-022-b-project-recipes-app/src/context/AppContext.js">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="3" count="7" type="stmt"/>
+      </file>
+      <file name="AppProvider.js" path="/Users/brenoaraujo/Projetos Trybe/sd-022-b-project-recipes-app/src/context/AppProvider.js">
+        <metrics statements="11" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="6" count="110" type="stmt"/>
+        <line num="7" count="110" type="stmt"/>
+        <line num="8" count="110" type="stmt"/>
+        <line num="9" count="110" type="stmt"/>
+        <line num="10" count="110" type="stmt"/>
+        <line num="11" count="110" type="stmt"/>
+        <line num="12" count="110" type="stmt"/>
+        <line num="13" count="110" type="stmt"/>
+        <line num="15" count="110" type="stmt"/>
+        <line num="34" count="110" type="stmt"/>
+        <line num="41" count="7" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.pages">
+      <metrics statements="71" coveredstatements="51" conditionals="9" coveredconditionals="9" methods="23" coveredmethods="15"/>
+      <file name="DoneRecipes.js" path="/Users/brenoaraujo/Projetos Trybe/sd-022-b-project-recipes-app/src/pages/DoneRecipes.js">
+        <metrics statements="5" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+      </file>
+      <file name="DrinkDetails.js" path="/Users/brenoaraujo/Projetos Trybe/sd-022-b-project-recipes-app/src/pages/DrinkDetails.js">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="10" count="3" type="stmt"/>
+        <line num="12" count="3" type="stmt"/>
+        <line num="13" count="3" type="stmt"/>
+        <line num="14" count="3" type="stmt"/>
+        <line num="17" count="3" type="stmt"/>
+      </file>
+      <file name="DrinkInProgress.js" path="/Users/brenoaraujo/Projetos Trybe/sd-022-b-project-recipes-app/src/pages/DrinkInProgress.js">
+        <metrics statements="5" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+      </file>
+      <file name="Drinks.js" path="/Users/brenoaraujo/Projetos Trybe/sd-022-b-project-recipes-app/src/pages/Drinks.js">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="11" count="34" type="stmt"/>
+        <line num="13" count="33" type="stmt"/>
+        <line num="14" count="4" type="stmt"/>
+        <line num="15" count="4" type="stmt"/>
+        <line num="17" count="33" type="stmt"/>
+      </file>
+      <file name="FavoriteRecipes.js" path="/Users/brenoaraujo/Projetos Trybe/sd-022-b-project-recipes-app/src/pages/FavoriteRecipes.js">
+        <metrics statements="5" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+      </file>
+      <file name="FoodDetails.js" path="/Users/brenoaraujo/Projetos Trybe/sd-022-b-project-recipes-app/src/pages/FoodDetails.js">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="10" count="4" type="stmt"/>
+        <line num="12" count="4" type="stmt"/>
+        <line num="13" count="3" type="stmt"/>
+        <line num="14" count="3" type="stmt"/>
+        <line num="17" count="4" type="stmt"/>
+      </file>
+      <file name="FoodInProgress.js" path="/Users/brenoaraujo/Projetos Trybe/sd-022-b-project-recipes-app/src/pages/FoodInProgress.js">
+        <metrics statements="5" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+      </file>
+      <file name="Foods.js" path="/Users/brenoaraujo/Projetos Trybe/sd-022-b-project-recipes-app/src/pages/Foods.js">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="11" count="56" type="stmt"/>
+        <line num="12" count="55" type="stmt"/>
+        <line num="13" count="7" type="stmt"/>
+        <line num="14" count="7" type="stmt"/>
+        <line num="17" count="55" type="stmt"/>
+      </file>
+      <file name="Login.js" path="/Users/brenoaraujo/Projetos Trybe/sd-022-b-project-recipes-app/src/pages/Login.js">
+        <metrics statements="26" coveredstatements="26" conditionals="9" coveredconditionals="9" methods="5" coveredmethods="5"/>
+        <line num="6" count="234" type="stmt"/>
+        <line num="7" count="234" type="stmt"/>
+        <line num="8" count="234" type="stmt"/>
+        <line num="9" count="234" type="stmt"/>
+        <line num="10" count="234" type="stmt"/>
+        <line num="12" count="234" type="stmt"/>
+        <line num="13" count="117" type="stmt"/>
+        <line num="14" count="117" type="stmt"/>
+        <line num="15" count="117" type="cond" truecount="2" falsecount="0"/>
+        <line num="20" count="5" type="stmt"/>
+        <line num="22" count="112" type="stmt"/>
+        <line num="26" count="234" type="stmt"/>
+        <line num="27" count="110" type="cond" truecount="2" falsecount="0"/>
+        <line num="28" count="75" type="stmt"/>
+        <line num="30" count="110" type="cond" truecount="2" falsecount="0"/>
+        <line num="31" count="35" type="stmt"/>
+        <line num="35" count="234" type="stmt"/>
+        <line num="36" count="4" type="stmt"/>
+        <line num="37" count="4" type="stmt"/>
+        <line num="38" count="4" type="stmt"/>
+        <line num="39" count="4" type="stmt"/>
+        <line num="40" count="4" type="stmt"/>
+        <line num="43" count="234" type="stmt"/>
+        <line num="44" count="7" type="stmt"/>
+        <line num="45" count="7" type="stmt"/>
+        <line num="48" count="234" type="stmt"/>
+      </file>
+      <file name="Profile.js" path="/Users/brenoaraujo/Projetos Trybe/sd-022-b-project-recipes-app/src/pages/Profile.js">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="9" count="2" type="stmt"/>
+        <line num="11" count="2" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="15" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.services">
+      <metrics statements="74" coveredstatements="48" conditionals="6" coveredconditionals="2" methods="17" coveredmethods="13"/>
+      <file name="drinkAPI.js" path="/Users/brenoaraujo/Projetos Trybe/sd-022-b-project-recipes-app/src/services/drinkAPI.js">
+        <metrics statements="24" coveredstatements="21" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="6"/>
+        <line num="2" count="15" type="stmt"/>
+        <line num="3" count="15" type="stmt"/>
+        <line num="4" count="9" type="stmt"/>
+        <line num="5" count="4" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="21" count="3" type="stmt"/>
+        <line num="22" count="3" type="stmt"/>
+        <line num="23" count="3" type="stmt"/>
+        <line num="24" count="3" type="stmt"/>
+        <line num="30" count="2" type="stmt"/>
+        <line num="31" count="2" type="stmt"/>
+        <line num="32" count="2" type="stmt"/>
+        <line num="33" count="2" type="stmt"/>
+        <line num="37" count="2" type="stmt"/>
+        <line num="38" count="2" type="stmt"/>
+        <line num="39" count="2" type="stmt"/>
+        <line num="40" count="2" type="stmt"/>
+        <line num="44" count="3" type="stmt"/>
+        <line num="45" count="0" type="stmt"/>
+        <line num="46" count="0" type="stmt"/>
+        <line num="47" count="0" type="stmt"/>
+      </file>
+      <file name="foodAPI.js" path="/Users/brenoaraujo/Projetos Trybe/sd-022-b-project-recipes-app/src/services/foodAPI.js">
+        <metrics statements="50" coveredstatements="27" conditionals="6" coveredconditionals="2" methods="11" coveredmethods="7"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="23" count="15" type="stmt"/>
+        <line num="24" count="15" type="stmt"/>
+        <line num="25" count="9" type="stmt"/>
+        <line num="26" count="4" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="32" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="36" count="0" type="stmt"/>
+        <line num="37" count="0" type="stmt"/>
+        <line num="38" count="0" type="stmt"/>
+        <line num="42" count="4" type="stmt"/>
+        <line num="44" count="4" type="cond" truecount="1" falsecount="1"/>
+        <line num="45" count="0" type="stmt"/>
+        <line num="47" count="4" type="stmt"/>
+        <line num="48" count="4" type="stmt"/>
+        <line num="49" count="4" type="stmt"/>
+        <line num="53" count="1" type="stmt"/>
+        <line num="55" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="56" count="0" type="stmt"/>
+        <line num="59" count="1" type="stmt"/>
+        <line num="60" count="1" type="stmt"/>
+        <line num="61" count="1" type="stmt"/>
+        <line num="65" count="3" type="stmt"/>
+        <line num="66" count="0" type="stmt"/>
+        <line num="67" count="0" type="stmt"/>
+        <line num="68" count="0" type="stmt"/>
+        <line num="75" count="1" type="stmt"/>
+        <line num="76" count="1" type="stmt"/>
+        <line num="77" count="1" type="stmt"/>
+        <line num="78" count="1" type="stmt"/>
+        <line num="84" count="3" type="stmt"/>
+        <line num="85" count="3" type="stmt"/>
+        <line num="86" count="3" type="stmt"/>
+        <line num="87" count="3" type="stmt"/>
+        <line num="93" count="2" type="stmt"/>
+        <line num="94" count="2" type="stmt"/>
+        <line num="95" count="2" type="stmt"/>
+        <line num="96" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.services.helpers">
+      <metrics statements="4" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="mockIngredientSearch.js" path="/Users/brenoaraujo/Projetos Trybe/sd-022-b-project-recipes-app/src/services/helpers/mockIngredientSearch.js">
+        <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="0" type="stmt"/>
+      </file>
+      <file name="renderWithRouter.js" path="/Users/brenoaraujo/Projetos Trybe/sd-022-b-project-recipes-app/src/services/helpers/renderWithRouter.js">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="33" count="1" type="stmt"/>
+        <line num="34" count="6" type="stmt"/>
+        <line num="35" count="6" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>
