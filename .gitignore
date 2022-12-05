@@ -1,3 +1,4 @@
 cypress.json
 cypress/
 coverage/
+public/
