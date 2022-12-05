@@ -2,7 +2,6 @@
 
 A [Trybe](https://www.betrybe.com/) é uma escola de tecnologia com foco em formação de Desenvolvedores Web e o projeto App de Receitas foi proposto como atividade de aprimoramento dos estudos sobre desenvolvimento front-end. 
 
-O projeto foi elaborado com o seguinte time de desenvolvedores: [Larissa Perinoto](https://github.com/larissaperinoto), [Harumi Maeda](https://github.com/harumimaeda), [Gustavo Vieira de Oliveira](https://github.com/Gusvioli), [Jean Rosa](https://github.com/Jean-Rosa19) e [Robson Mendes](https://github.com/Robsonmendes1987).
 
 ### Objetivo
 
